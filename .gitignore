@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+INTERNAL/
+**/INTERNAL*/
+reversal*
+*reversal*key*
+__pycache__/
+.venv/
+.DS_Store
+.idea/
+.vscode/
