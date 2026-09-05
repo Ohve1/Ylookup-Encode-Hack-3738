@@ -1,0 +1,67 @@
+:root {
+  --ink: #142033;
+  --muted: #5b6578;
+  --line: #d7dde7;
+  --paper: #f6f4ef;
+  --card: #fff;
+  --rule: #1f6b4a;
+  --case: #8a4b12;
+  --open: #8b1e2d;
+  --pass: #1f6b4a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 16px/1.45 "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+header, .lede, .counts, main, footer { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+header { display: flex; justify-content: space-between; align-items: end; padding-top: 36px; gap: 16px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; color: var(--muted); margin: 0 0 6px; font-family: ui-sans-serif, system-ui, sans-serif; }
+h1 { font-size: 28px; margin: 0; font-weight: 600; }
+.lede { color: var(--muted); margin: 16px auto 24px; }
+.badge { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; }
+.badge.pass { color: var(--pass); border-color: #b7e0c8; background: #e8f6ee; }
+.badge.fail { color: var(--open); border-color: #f0c3c8; background: #fdecee; }
+.counts { display: flex; gap: 12px; margin-bottom: 20px; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 13px; }
+.counts span { background: #fff; border: 1px solid var(--line); padding: 8px 12px; border-radius: 8px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.card.open { border-color: #e8b4bb; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12px; }
+.pill { padding: 3px 8px; border-radius: 999px; background: #eef1f6; }
+.pill.rule { background: #e8f6ee; color: var(--rule); }
+.pill.decision { background: #f8eadc; color: var(--case); }
+.pill.review { background: #fdecee; color: var(--open); }
+.amount { font-variant-numeric: tabular-nums; font-size: 20px; margin: 0 0 8px; }
+.excerpt {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+  background: #142033;
+  color: #f6f4ef;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+.reason { margin: 8px 0 0; }
+.actions { display: flex; gap: 8px; margin-top: 14px; }
+button, .actions textarea {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+}
+button {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+.actions textarea { flex: 1; min-height: 42px; padding: 8px; border-radius: 8px; border: 1px solid var(--line); }
+footer { color: var(--muted); font-size: 13px; padding: 24px; }
