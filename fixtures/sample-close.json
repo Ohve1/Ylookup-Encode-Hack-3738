@@ -1,0 +1,123 @@
+{
+  "close_id": "fixture-01-week",
+  "dataset": "01-bank-statements-to-journal-entries",
+  "note": "Synthetic fixture in the documented shape. Not production rows. Unmatched residue is intentional.",
+  "batch": {
+    "id": "B-2026-W36-EUR-01",
+    "entity": "Northhaven Holdings LP",
+    "currency": "EUR",
+    "tie_out": {
+      "status": "pass",
+      "debits": 184250.00,
+      "credits": 184250.00,
+      "source": "zero-balance gate (admin first check)"
+    },
+    "counts": { "rule": 2, "decision": 2, "open_case": 1 }
+  },
+  "lines": [
+    {
+      "id": "L-001",
+      "status": "accepted",
+      "origin": "rule",
+      "amount": -2500.00,
+      "currency": "EUR",
+      "date": "2026-08-04",
+      "class": "vendor",
+      "source": {
+        "file": "Northhaven_AegisBank_EUR_8821.pdf",
+        "page": 2,
+        "excerpt": "AEGIS FEE Q3    MGT PLATFORM"
+      },
+      "rule": { "id": "vendor-codes", "version": "v0", "matched": "Aegis Platform Fees" },
+      "case": null
+    },
+    {
+      "id": "L-002",
+      "status": "accepted",
+      "origin": "decision",
+      "amount": -18400.00,
+      "currency": "EUR",
+      "date": "2026-08-05",
+      "class": "vendor",
+      "source": {
+        "file": "Northhaven_AegisBank_EUR_8821.pdf",
+        "page": 3,
+        "excerpt": "ACME INTL LTD PAYMENT INV 4412"
+      },
+      "rule": null,
+      "case": {
+        "id": "C-014",
+        "type": "counterparty_miss",
+        "candidates": ["Acme International Ltd (vendor)", "Acme International (related party)"],
+        "chosen": "Acme International Ltd (vendor)",
+        "author": "fund account",
+        "decider": "fund admin",
+        "reason": "Truncated bank narrative matches vendor master alias used on Inv 4408 last month; related-party master has no Acme entity for this fund."
+      }
+    },
+    {
+      "id": "L-003",
+      "status": "open",
+      "origin": "decision",
+      "amount": -92000.00,
+      "currency": "EUR",
+      "date": "2026-08-06",
+      "class": "review",
+      "source": {
+        "file": "Northhaven_AegisBank_EUR_8821.pdf",
+        "page": 4,
+        "excerpt": "NH SPV IV   EQ  CALL  RESID"
+      },
+      "rule": null,
+      "case": {
+        "id": "C-021",
+        "type": "review_flag",
+        "candidates": ["investment / position under Deal IV", "internal / related party transfer"],
+        "chosen": null,
+        "author": "fund account",
+        "decider": null,
+        "reason": "Project token not on Project Code Report (one of the 30). Deal & Position master has SPV IV but the residual call is not a known position code. Needs admin legal overlay."
+      }
+    },
+    {
+      "id": "L-004",
+      "status": "accepted",
+      "origin": "rule",
+      "amount": 125000.00,
+      "currency": "EUR",
+      "date": "2026-08-07",
+      "class": "investor",
+      "source": {
+        "file": "Northhaven_AegisBank_EUR_8821.pdf",
+        "page": 5,
+        "excerpt": "INFLOW   LP EQUALISATION"
+      },
+      "rule": { "id": "investor-master", "version": "v0", "matched": "equalisation inflow" },
+      "case": null
+    },
+    {
+      "id": "L-005",
+      "status": "accepted",
+      "origin": "decision",
+      "amount": -4350.00,
+      "currency": "EUR",
+      "date": "2026-08-07",
+      "class": "vendor",
+      "source": {
+        "file": "Northhaven_AegisBank_EUR_8821.pdf",
+        "page": 5,
+        "excerpt": "COUNSEL RETAINER  Q3"
+      },
+      "rule": null,
+      "case": {
+        "id": "C-030",
+        "type": "classification",
+        "candidates": ["admin expense", "management fee offset"],
+        "chosen": "admin expense",
+        "author": "fund account",
+        "decider": "fund admin",
+        "reason": "Legal retainer is an operating expense under the LPA expense clause; not a management-fee offset. Figure is not the 2% fee line."
+      }
+    }
+  ]
+}
