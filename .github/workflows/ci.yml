@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fixture-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Guard — pack and secrets must not be in the repo
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -Ei '\.(pdf|xlsx|xls)$|\.env$|reversal'; then
+            echo "Refusing: dataset body or secret-like path is tracked"
+            exit 1
+          fi
+          echo "OK: no pack bodies or .env tracked"
+
+      - name: Validate public fixture contract
+        run: python3 scripts/ci_check.py
+
+      - name: Smoke reviewer server
+        run: |
+          set -euo pipefail
+          python3 -m app.server --port 8378 &
+          pid=$!
+          trap 'kill $pid 2>/dev/null || true' EXIT
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if curl -fsS http://127.0.0.1:8378/data >/tmp/close.json; then
+              break
+            fi
+            sleep 0.3
+          done
+          python3 -c "import json; d=json.load(open('/tmp/close.json')); assert d.get('lines'), d"
+          echo "OK: /data served fixture lines"
