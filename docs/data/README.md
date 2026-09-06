@@ -2,6 +2,16 @@
 
 Three sets of material, all derived from real client work and all anonymised. Production file bodies are not in this public repo. These READMEs are the contracts the product is built against.
 
+## One command to execute
+
+From repo root:
+
+```bash
+./run.sh
+```
+
+Use this to launch the reviewer app that consumes these dataset contracts. `PACK=02 ./run.sh` opens the Dataset 02 close; both packs are ingested by `scripts/ingest_dataset.py` and `scripts/ingest_dataset02.py` into the same canonical model.
+
 | Folder | What it is | Shape of the task |
 |---|---|---|
 | `01-bank-statements-to-journal-entries` | Seven bank statements plus a working file | Read a PDF statement, work out who each payment was to or from, classify it, and produce the journal entries |

@@ -1,0 +1,534 @@
+{
+  "metrics_version": "pilot_metrics_v1",
+  "close_id": "CLOSE-2026-Q2-KESTREL-GL-LOADER",
+  "workflow": "gl_to_loader",
+  "period": "2026-Q2",
+  "close_status": "signed_off",
+  "run": {
+    "kind": "scripted_replay",
+    "note": "Decisions replayed from the filed workbook / deterministic candidates by scripts/run_pilot.py; no human timing. Replace with a human run for VALIDATE.",
+    "computed_at": "2026-09-06T10:30:55Z",
+    "started_at": "2026-09-06T10:30:55Z",
+    "source_close": "data/processed/close-dataset02.json",
+    "decided_by_reason": {
+      "no_matching_rule": 63,
+      "entity_miss": 30,
+      "rule_mismatch": 10
+    }
+  },
+  "volume": {
+    "lines": 1204,
+    "rule_mapped_lines": 1101,
+    "rule_coverage": 0.9145,
+    "cases_opened": 103,
+    "cases_decided": 103,
+    "cases_open": 0,
+    "decisions": 103,
+    "journal_events": 104
+  },
+  "exception_rate": {
+    "value": 0.0855,
+    "definition": "Cases opened / Lines",
+    "by_reason": {
+      "no_matching_rule": {
+        "cases": 63,
+        "decided": 63,
+        "accept": 63,
+        "override": 0,
+        "reject": 0
+      },
+      "entity_miss": {
+        "cases": 30,
+        "decided": 30,
+        "accept": 30,
+        "override": 0,
+        "reject": 0
+      },
+      "rule_mismatch": {
+        "cases": 10,
+        "decided": 10,
+        "accept": 10,
+        "override": 0,
+        "reject": 0
+      }
+    }
+  },
+  "override_rate": {
+    "value": 0.0,
+    "definition": "Override Decisions / decided Cases",
+    "overrides": 0,
+    "accepts": 103,
+    "rejects": 0
+  },
+  "review_rounds": {
+    "mean": 1.0,
+    "max": 1,
+    "cases_with_more_than_one_round": 0,
+    "definition": "Decisions per decided Case; > 1 means reject → re-decide"
+  },
+  "hours_per_close": {
+    "value": 0.0,
+    "note": "first Decision → sign-off (Case opened_at not recorded); scripted replay — not evidence of human cycle time",
+    "started_at": "2026-09-06T10:30:55+00:00",
+    "signed_off_at": "2026-09-06T10:30:55+00:00",
+    "time_to_decide_hours": {
+      "mean": null,
+      "max": null,
+      "sample": 0
+    }
+  },
+  "error_rate": {
+    "value": null,
+    "note": "Measured after the validated export is loaded into the system of record; no SoR in this repo."
+  },
+  "decisions_by_role": {
+    "fund_admin": 63,
+    "fund_manager": 40
+  },
+  "decisions_by_person": {
+    "Fund Admin (pilot replay)": 63,
+    "Fund Manager (pilot replay)": 40
+  },
+  "rule_health": {
+    "stale_threshold": 0.25,
+    "potentially_stale_rules": [],
+    "rules_evaluated": 57,
+    "rules": [
+      {
+        "rule_id": "RULE-COA-006",
+        "lines": 4,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-007",
+        "lines": 73,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-008",
+        "lines": 74,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-009",
+        "lines": 15,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-010",
+        "lines": 6,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-011",
+        "lines": 24,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-013",
+        "lines": 17,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-014",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-015",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-017",
+        "lines": 18,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-018",
+        "lines": 4,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-021",
+        "lines": 5,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-027",
+        "lines": 73,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-028",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-031",
+        "lines": 22,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-032",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-034",
+        "lines": 73,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-037",
+        "lines": 77,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-043",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-044",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-045",
+        "lines": 4,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-053",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-054",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-057",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-058",
+        "lines": 58,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-059",
+        "lines": 19,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-066",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-069",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-070",
+        "lines": 5,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-072",
+        "lines": 8,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-073",
+        "lines": 70,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-076",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-080",
+        "lines": 69,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-084",
+        "lines": 24,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-085",
+        "lines": 5,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-088",
+        "lines": 72,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-089",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-090",
+        "lines": 8,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-091",
+        "lines": 70,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-092",
+        "lines": 58,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-093",
+        "lines": 47,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-095",
+        "lines": 5,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-097",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-098",
+        "lines": 68,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-099",
+        "lines": 15,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-100",
+        "lines": 7,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-COA-105",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-DEAL-002",
+        "lines": 3,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-012",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-027",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-050",
+        "lines": 27,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-053",
+        "lines": 21,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-058",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-065",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-066",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-081",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-LE-084",
+        "lines": 18,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      }
+    ]
+  },
+  "tie_out": {
+    "hard_gates": [
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "diu_batch_zero_balance",
+        "status": "passed",
+        "difference": 0.0
+      }
+    ],
+    "all_passed": true
+  },
+  "sign_off": {
+    "decision_id": "DEC-104",
+    "decided_by": "Fund Manager (pilot replay)",
+    "role": "fund_manager",
+    "timestamp": "2026-09-06T10:30:55Z"
+  },
+  "export": {
+    "file": "data/processed/pilot/CLOSE-2026-Q2-KESTREL-GL-LOADER/validated_mapping_CLOSE-2026-Q2-KESTREL-GL-LOADER.csv",
+    "line_count": 1204,
+    "profile": "validated_mapping_csv_v1"
+  }
+}

@@ -19,13 +19,15 @@
 > "As a fund administrator, I can tell you that I'm not going to switch software. What I do need is the ability to verify the data that I'm sticking into that software."
 > — fund admin persona [E7]
 
-**The product is not a new general ledger. It is a record of the 50% that never lands in the mapping file, attached to the source it came from.**
+**The product is a fund-close workflow and control layer:** it turns fragmented source files into traceable lines, surfaces mapping exceptions, and records the decisions behind validated outputs. It sits between source artifacts and the system of record; it does not replace the accounting platform.
+
+It is also the record of the 50% that never lands in the mapping file, attached to the source it came from.
 
 ---
 
 ## The one object
 
-**Unrecorded classification and mapping-gap decisions — on bank-statement-to-journal-entry and GL-to-loader — with no source lineage for the reviewer one level up.**
+**Unrecorded classification and mapping-gap decisions — exercised on Bank→Journal and GL→Loader as two validation cases of the same workflow — with no source lineage for the reviewer one level up.**
 
 That is the whole problem. Everything below is evidence for it, the constraint on solving it, or what we are deliberately not solving this weekend.
 
@@ -43,11 +45,11 @@ That is the whole problem. Everything below is evidence for it, the constraint o
 
 ## The constraint
 
-**They will not change the system of record.** The admin persona said it directly. The product sits between the source documents and the accounting system; it never replaces the accounting system, and its output has to be something the reviewer can accept or reject before it goes in.
+**They will not change the system of record.** The admin persona said it directly. The product sits between the source documents and the accounting system; it never replaces the accounting system. Product output is a **validated, system-specific export file** the operator loads — not an SoR API write-back.
 
 ## Non-goal this weekend
 
-**Replacing the administrator.** The product drafts; a human still posts. Autonomy only on classes the admin has explicitly blessed. This is consistent with decisions D3 and D8 in the decision log and with what the room said.
+**Replacing the administrator.** The product drafts; a human still decides and loads the export. Autonomy only on classes dual-control blessed as Rules. This is consistent with decisions D3, D8, and D-013 in the decision log and with what the room said.
 
 ## What "solved" looks like by Sunday 12:00
 
@@ -56,7 +58,8 @@ For any journal line or loader row the reviewer opens, they can see, without lea
 1. the source excerpt it came from (statement PDF page and string, or GL row, or legal-document clause);
 2. whether it was produced by a rule (which rule, which version) or by a decision;
 3. if by a decision: the candidate treatments, the one chosen, who chose it, and the reason in one paragraph;
-4. a zero-balance / tie-out gate result for the batch it belongs to.
+4. a zero-balance / tie-out gate result for the batch it belongs to;
+5. that the slice can leave as a **validated export** into the existing SoR (boundary of the product).
 
 The reviewer's job changes from "re-derive it" to "accept, reject, or override with a reason" — and the override is itself recorded as a decision with lineage.
 

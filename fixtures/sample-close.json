@@ -1,123 +1,517 @@
 {
-  "close_id": "fixture-01-week",
-  "dataset": "01-bank-statements-to-journal-entries",
-  "note": "Synthetic fixture in the documented shape. Not production rows. Unmatched residue is intentional.",
-  "batch": {
-    "id": "B-2026-W36-EUR-01",
-    "entity": "Northhaven Holdings LP",
-    "currency": "EUR",
-    "tie_out": {
-      "status": "pass",
-      "debits": 184250.00,
-      "credits": 184250.00,
-      "source": "zero-balance gate (admin first check)"
-    },
-    "counts": { "rule": 2, "decision": 2, "open_case": 1 }
+  "close": {
+    "close_id": "FIXTURE-2026-08-NORTHHAVEN",
+    "fund_id": "Northhaven Holdings LP",
+    "period": "2026-08",
+    "workflow": "bank_to_journal",
+    "status": "in_review"
   },
+  "sources": [
+    {
+      "source_id": "SRC-PDF-001",
+      "filename": "Northhaven_AegisBank_EUR_8821.pdf",
+      "file_type": "pdf",
+      "role": "bank_statement",
+      "location": {
+        "pages": 4
+      },
+      "text": null
+    },
+    {
+      "source_id": "SRC-XLS-001",
+      "filename": "Northhaven_Aug26_Staging.xlsx",
+      "file_type": "xlsx",
+      "role": "staging_workbook",
+      "location": {
+        "sheet": "Staging Sheet"
+      },
+      "text": null
+    }
+  ],
   "lines": [
     {
-      "id": "L-001",
-      "status": "accepted",
-      "origin": "rule",
-      "amount": -2500.00,
-      "currency": "EUR",
+      "line_id": "L-001",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
       "date": "2026-08-04",
-      "class": "vendor",
-      "source": {
-        "file": "Northhaven_AegisBank_EUR_8821.pdf",
-        "page": 2,
-        "excerpt": "AEGIS FEE Q3    MGT PLATFORM"
+      "description": "AEGIS FEE Q3 MGT PLATFORM",
+      "amount": -2500.0,
+      "currency": "EUR",
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 2
+        }
       },
-      "rule": { "id": "vendor-codes", "version": "v0", "matched": "Aegis Platform Fees" },
-      "case": null
+      "status": "resolved",
+      "mapping": {
+        "account": "6100",
+        "classification": "Vendor",
+        "project_code": "OH - Platform",
+        "counterparty": "AEGIS"
+      },
+      "rule_id": "RULE-001",
+      "case_id": null,
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 2
+        },
+        "match_method": "exact",
+        "excerpt": "AEGIS FEE Q3 MGT PLATFORM"
+      },
+      "mapping_method": "rule"
     },
     {
-      "id": "L-002",
-      "status": "accepted",
-      "origin": "decision",
-      "amount": -18400.00,
-      "currency": "EUR",
+      "line_id": "L-002",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
       "date": "2026-08-05",
-      "class": "vendor",
-      "source": {
-        "file": "Northhaven_AegisBank_EUR_8821.pdf",
-        "page": 3,
-        "excerpt": "ACME INTL LTD PAYMENT INV 4412"
+      "description": "CHARGES FOR 2, OUTWARD SEPA PAYMENT",
+      "amount": -0.44,
+      "currency": "EUR",
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 3
+        }
       },
-      "rule": null,
-      "case": {
-        "id": "C-014",
-        "type": "counterparty_miss",
-        "candidates": ["Acme International Ltd (vendor)", "Acme International (related party)"],
-        "chosen": "Acme International Ltd (vendor)",
-        "author": "fund account",
-        "decider": "fund admin",
-        "reason": "Truncated bank narrative matches vendor master alias used on Inv 4408 last month; related-party master has no Acme entity for this fund."
-      }
+      "status": "resolved",
+      "mapping": {
+        "account": "6900",
+        "classification": "Other",
+        "project_code": "OH - Bank Fees"
+      },
+      "rule_id": "RULE-002",
+      "case_id": null,
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 2
+        },
+        "match_method": "exact",
+        "excerpt": "CHARGES FOR 2, OUTWARD SEPA PAYMENT"
+      },
+      "mapping_method": "rule"
     },
     {
-      "id": "L-003",
-      "status": "open",
-      "origin": "decision",
-      "amount": -92000.00,
-      "currency": "EUR",
+      "line_id": "L-003",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
       "date": "2026-08-06",
-      "class": "review",
-      "source": {
-        "file": "Northhaven_AegisBank_EUR_8821.pdf",
-        "page": 4,
+      "description": "NH SPV IV EQ CALL RESID",
+      "amount": -92000.0,
+      "currency": "EUR",
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 4
+        }
+      },
+      "status": "unresolved",
+      "mapping": {
+        "account": "10000.1",
+        "classification": "Review"
+      },
+      "rule_id": "RULE-003",
+      "case_id": "CASE-001",
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 4
+        },
+        "match_method": "exact",
         "excerpt": "NH SPV IV   EQ  CALL  RESID"
       },
-      "rule": null,
-      "case": {
-        "id": "C-021",
-        "type": "review_flag",
-        "candidates": ["investment / position under Deal IV", "internal / related party transfer"],
-        "chosen": null,
-        "author": "fund account",
-        "decider": null,
-        "reason": "Project token not on Project Code Report (one of the 30). Deal & Position master has SPV IV but the residual call is not a known position code. Needs admin legal overlay."
-      }
+      "mapping_method": "rule"
     },
     {
-      "id": "L-004",
-      "status": "accepted",
-      "origin": "rule",
-      "amount": 125000.00,
-      "currency": "EUR",
+      "line_id": "L-004",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
       "date": "2026-08-07",
-      "class": "investor",
-      "source": {
-        "file": "Northhaven_AegisBank_EUR_8821.pdf",
-        "page": 5,
-        "excerpt": "INFLOW   LP EQUALISATION"
+      "description": "TRF HALVORSEN ADVISORY INV 2231",
+      "amount": -18000.0,
+      "currency": "EUR",
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 5
+        }
       },
-      "rule": { "id": "investor-master", "version": "v0", "matched": "equalisation inflow" },
-      "case": null
+      "status": "resolved",
+      "mapping": {
+        "account": "6200",
+        "classification": "Vendor",
+        "pulled_counterparty": "HALVORSEN ADVISORY",
+        "project_code": "OH - Legal"
+      },
+      "rule_id": null,
+      "case_id": "CASE-002",
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 3
+        },
+        "match_method": "exact",
+        "excerpt": "TRF HALVORSEN ADVISORY  INV 2231"
+      },
+      "mapping_method": "decision"
     },
     {
-      "id": "L-005",
-      "status": "accepted",
-      "origin": "decision",
-      "amount": -4350.00,
+      "line_id": "L-005",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
+      "date": "2026-08-08",
+      "description": "CAPITAL CALL DEAL VII TRANCHE B",
+      "amount": 250000.0,
       "currency": "EUR",
-      "date": "2026-08-07",
-      "class": "vendor",
-      "source": {
-        "file": "Northhaven_AegisBank_EUR_8821.pdf",
-        "page": 5,
-        "excerpt": "COUNSEL RETAINER  Q3"
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 6
+        }
       },
-      "rule": null,
-      "case": {
-        "id": "C-030",
-        "type": "classification",
-        "candidates": ["admin expense", "management fee offset"],
-        "chosen": "admin expense",
-        "author": "fund account",
-        "decider": "fund admin",
-        "reason": "Legal retainer is an operating expense under the LPA expense clause; not a management-fee offset. Figure is not the 2% fee line."
-      }
+      "status": "resolved",
+      "mapping": {
+        "account": "14070",
+        "classification": "Investment",
+        "project_code": "DEAL VII"
+      },
+      "rule_id": null,
+      "case_id": "CASE-003",
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 1
+        },
+        "match_method": "exact",
+        "excerpt": "CAPITAL CALL  DEAL VII  TRANCHE B"
+      },
+      "mapping_method": "override"
+    },
+    {
+      "line_id": "L-006",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
+      "date": "2026-08-09",
+      "description": "AEGIS FEE Q3 CUSTODY",
+      "amount": -1750.0,
+      "currency": "EUR",
+      "source_ref": {
+        "source_id": "SRC-XLS-001",
+        "location": {
+          "sheet": "Staging Sheet",
+          "row": 7
+        }
+      },
+      "status": "resolved",
+      "mapping": {
+        "account": "6100",
+        "classification": "Vendor",
+        "project_code": "OH - Platform",
+        "counterparty": "AEGIS"
+      },
+      "rule_id": "RULE-001",
+      "case_id": null,
+      "bank_ref": {
+        "source_id": "SRC-PDF-001",
+        "location": {
+          "page": 2
+        },
+        "match_method": "exact",
+        "excerpt": "AEGIS FEE Q3 CUSTODY"
+      },
+      "mapping_method": "rule"
     }
-  ]
+  ],
+  "rules": [
+    {
+      "rule_id": "RULE-001",
+      "name": "Vendor code: Aegis Platform",
+      "condition": {
+        "field": "counterparty",
+        "operator": "equals",
+        "value": "AEGIS"
+      },
+      "action": {
+        "classification": "Vendor",
+        "project_code": "OH - Platform"
+      },
+      "origin": "historical_mapping",
+      "status": "active",
+      "version": "v0"
+    },
+    {
+      "rule_id": "RULE-002",
+      "name": "Bank charges narrative",
+      "condition": {
+        "field": "description",
+        "operator": "contains",
+        "value": "CHARGES"
+      },
+      "action": {
+        "classification": "Other",
+        "project_code": "OH - Bank Fees"
+      },
+      "origin": "historical_mapping",
+      "status": "active",
+      "version": "v0"
+    },
+    {
+      "rule_id": "RULE-003",
+      "name": "Classification equals Review",
+      "condition": {
+        "field": "classification",
+        "operator": "equals",
+        "value": "Review"
+      },
+      "action": {
+        "classification": "Review"
+      },
+      "origin": "historical_mapping",
+      "status": "active",
+      "version": "v0"
+    },
+    {
+      "rule_id": "RULE-004",
+      "name": "Classification equals Investment",
+      "condition": {
+        "field": "classification",
+        "operator": "equals",
+        "value": "Investment"
+      },
+      "action": {
+        "classification": "Investment"
+      },
+      "origin": "historical_mapping",
+      "status": "active",
+      "version": "v0"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "CASE-001",
+      "line_id": "L-003",
+      "reasons": [
+        "review_flag"
+      ],
+      "primary_reason": "review_flag",
+      "status": "unresolved",
+      "priority": "high",
+      "suggestion": {
+        "candidates": [
+          {
+            "treatment": "Residual equity call on SPV IV",
+            "classification": "Investment",
+            "account": "14010",
+            "project_code": "DEAL IV",
+            "rationale": "Narrative names SPV IV and an equity call residual; matches precedent DEC pattern for Deal IV calls.",
+            "evidence": [
+              {
+                "type": "source",
+                "ref": "SRC-PDF-001"
+              },
+              {
+                "type": "rule",
+                "ref": "RULE-004"
+              }
+            ]
+          },
+          {
+            "treatment": "Hold in suspense pending LPA check",
+            "classification": "Review",
+            "account": "10000.1",
+            "project_code": null,
+            "rationale": "Amount is material; LPA clause on residual calls not yet confirmed.",
+            "evidence": [
+              {
+                "type": "source",
+                "ref": "SRC-PDF-001"
+              }
+            ]
+          }
+        ],
+        "candidates_note": "Grounded on source excerpt, RULE-004 and prior Deal IV decisions.",
+        "drafted_by": "assistant",
+        "model": "fixture",
+        "drafted_at": "2026-09-05T18:02:00Z"
+      },
+      "assigned_to": null,
+      "decision_id": null,
+      "partial_rule_id": null
+    },
+    {
+      "case_id": "CASE-002",
+      "line_id": "L-004",
+      "reasons": [
+        "counterparty_miss"
+      ],
+      "primary_reason": "counterparty_miss",
+      "status": "decided",
+      "priority": "medium",
+      "suggestion": {
+        "candidates": [
+          {
+            "treatment": "Legal adviser fee — Halvorsen",
+            "classification": "Vendor",
+            "account": "6200",
+            "project_code": "OH - Legal",
+            "rationale": "Counterparty string matches an adviser used on prior closes; invoice reference present.",
+            "evidence": [
+              {
+                "type": "source",
+                "ref": "SRC-PDF-001"
+              },
+              {
+                "type": "rule",
+                "ref": "RULE-001"
+              }
+            ]
+          },
+          {
+            "treatment": "Deal cost — allocate to Deal VII",
+            "classification": "Vendor",
+            "account": "14070",
+            "project_code": "DEAL VII",
+            "rationale": "Same week as Deal VII call; could be deal-related.",
+            "evidence": [
+              {
+                "type": "source",
+                "ref": "SRC-PDF-001"
+              }
+            ]
+          }
+        ],
+        "candidates_note": "Two treatments differ on P&L vs capitalised.",
+        "drafted_by": "assistant",
+        "model": "fixture",
+        "drafted_at": "2026-09-05T18:05:00Z"
+      },
+      "assigned_to": null,
+      "decision_id": "DEC-001",
+      "partial_rule_id": "RULE-001"
+    },
+    {
+      "case_id": "CASE-003",
+      "line_id": "L-005",
+      "reasons": [
+        "project_miss"
+      ],
+      "primary_reason": "project_miss",
+      "status": "decided",
+      "priority": "medium",
+      "suggestion": null,
+      "assigned_to": null,
+      "decision_id": "DEC-002",
+      "partial_rule_id": "RULE-004"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "DEC-001",
+      "action": "accept",
+      "previous_value": {
+        "account": "10000.1",
+        "classification": "Vendor"
+      },
+      "final_value": {
+        "classification": "Vendor",
+        "account": "6200",
+        "project_code": "OH - Legal"
+      },
+      "decided_by": "A. Lund",
+      "role": "fund_admin",
+      "reason": "Invoice 2231 is the Q3 legal retainer; recurring vendor, expense not deal cost.",
+      "timestamp": "2026-09-05T18:10:00Z",
+      "case_id": "CASE-002",
+      "line_id": "L-004",
+      "candidates": [
+        {
+          "treatment": "Legal adviser fee — Halvorsen",
+          "classification": "Vendor",
+          "account": "6200",
+          "project_code": "OH - Legal",
+          "rationale": "Counterparty string matches an adviser used on prior closes; invoice reference present.",
+          "evidence": [
+            {
+              "type": "source",
+              "ref": "SRC-PDF-001"
+            },
+            {
+              "type": "rule",
+              "ref": "RULE-001"
+            }
+          ]
+        },
+        {
+          "treatment": "Deal cost — allocate to Deal VII",
+          "classification": "Vendor",
+          "account": "14070",
+          "project_code": "DEAL VII",
+          "rationale": "Same week as Deal VII call; could be deal-related.",
+          "evidence": [
+            {
+              "type": "source",
+              "ref": "SRC-PDF-001"
+            }
+          ]
+        }
+      ],
+      "chosen": {
+        "treatment": "Legal adviser fee — Halvorsen",
+        "classification": "Vendor",
+        "account": "6200",
+        "project_code": "OH - Legal",
+        "rationale": "Counterparty string matches an adviser used on prior closes; invoice reference present.",
+        "evidence": [
+          {
+            "type": "source",
+            "ref": "SRC-PDF-001"
+          },
+          {
+            "type": "rule",
+            "ref": "RULE-001"
+          }
+        ]
+      }
+    },
+    {
+      "decision_id": "DEC-002",
+      "action": "override",
+      "previous_value": {
+        "account": "10000.1",
+        "classification": "Investment"
+      },
+      "final_value": {
+        "classification": "Investment",
+        "account": "14070",
+        "project_code": "DEAL VII"
+      },
+      "decided_by": "A. Lund",
+      "role": "fund_admin",
+      "reason": "Tranche B belongs to Deal VII per capital call notice dated 2026-08-07, not to the SPV.",
+      "timestamp": "2026-09-05T18:14:00Z",
+      "case_id": "CASE-003",
+      "line_id": "L-005",
+      "candidates": [],
+      "chosen": null,
+      "supersedes": "DEC-001"
+    }
+  ],
+  "tieouts": [
+    {
+      "tieout_id": "TIE-001",
+      "close_id": "FIXTURE-2026-08-NORTHHAVEN",
+      "source_total": 364250.44,
+      "line_total": 364250.44,
+      "difference": 0.0,
+      "status": "passed",
+      "currency": null,
+      "kind": "diu_batch_zero_balance",
+      "note": null,
+      "batch_id": null,
+      "failed_batches": null
+    }
+  ],
+  "_note": "Synthetic public fixture in canonical shape. Used only when data/processed/close.json is missing. Not the Discord pack."
 }

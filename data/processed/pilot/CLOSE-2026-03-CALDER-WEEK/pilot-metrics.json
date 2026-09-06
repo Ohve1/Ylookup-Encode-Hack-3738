@@ -1,0 +1,255 @@
+{
+  "metrics_version": "pilot_metrics_v1",
+  "close_id": "CLOSE-2026-03-CALDER-WEEK",
+  "workflow": "bank_to_journal",
+  "period": "2026-03",
+  "close_status": "signed_off",
+  "run": {
+    "kind": "scripted_replay",
+    "note": "Decisions replayed from the filed workbook / deterministic candidates by scripts/run_pilot.py; no human timing. Replace with a human run for VALIDATE.",
+    "computed_at": "2026-09-06T10:30:55Z",
+    "started_at": "2026-09-06T10:30:55Z",
+    "source_close": "data/processed/close.json",
+    "decided_by_reason": {
+      "first_seen": 5,
+      "no_matching_rule": 68,
+      "source_ambiguous": 4,
+      "rule_mismatch": 9,
+      "review_flag": 3,
+      "counterparty_miss": 1
+    }
+  },
+  "volume": {
+    "lines": 100,
+    "rule_mapped_lines": 10,
+    "rule_coverage": 0.1,
+    "cases_opened": 90,
+    "cases_decided": 90,
+    "cases_open": 0,
+    "decisions": 90,
+    "journal_events": 91
+  },
+  "exception_rate": {
+    "value": 0.9,
+    "definition": "Cases opened / Lines",
+    "by_reason": {
+      "first_seen": {
+        "cases": 5,
+        "decided": 5,
+        "accept": 5,
+        "override": 0,
+        "reject": 0
+      },
+      "no_matching_rule": {
+        "cases": 68,
+        "decided": 68,
+        "accept": 68,
+        "override": 0,
+        "reject": 0
+      },
+      "source_ambiguous": {
+        "cases": 4,
+        "decided": 4,
+        "accept": 4,
+        "override": 0,
+        "reject": 0
+      },
+      "rule_mismatch": {
+        "cases": 9,
+        "decided": 9,
+        "accept": 9,
+        "override": 0,
+        "reject": 0
+      },
+      "review_flag": {
+        "cases": 3,
+        "decided": 3,
+        "accept": 3,
+        "override": 0,
+        "reject": 0
+      },
+      "counterparty_miss": {
+        "cases": 1,
+        "decided": 1,
+        "accept": 1,
+        "override": 0,
+        "reject": 0
+      }
+    }
+  },
+  "override_rate": {
+    "value": 0.0,
+    "definition": "Override Decisions / decided Cases",
+    "overrides": 0,
+    "accepts": 90,
+    "rejects": 0
+  },
+  "review_rounds": {
+    "mean": 1.0,
+    "max": 1,
+    "cases_with_more_than_one_round": 0,
+    "definition": "Decisions per decided Case; > 1 means reject → re-decide"
+  },
+  "hours_per_close": {
+    "value": 0.0,
+    "note": "first Decision → sign-off (Case opened_at not recorded); scripted replay — not evidence of human cycle time",
+    "started_at": "2026-09-06T10:30:55+00:00",
+    "signed_off_at": "2026-09-06T10:30:55+00:00",
+    "time_to_decide_hours": {
+      "mean": null,
+      "max": null,
+      "sample": 0
+    }
+  },
+  "error_rate": {
+    "value": null,
+    "note": "Measured after the validated export is loaded into the system of record; no SoR in this repo."
+  },
+  "decisions_by_role": {
+    "fund_admin": 74,
+    "fund_manager": 16
+  },
+  "decisions_by_person": {
+    "Fund Admin (pilot replay)": 74,
+    "Fund Manager (pilot replay)": 16
+  },
+  "rule_health": {
+    "stale_threshold": 0.25,
+    "potentially_stale_rules": [],
+    "rules_evaluated": 13,
+    "rules": [
+      {
+        "rule_id": "RULE-008",
+        "lines": 4,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-028",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-165",
+        "lines": 1,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-206",
+        "lines": 26,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-207",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-209",
+        "lines": 2,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-214",
+        "lines": 8,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-215",
+        "lines": 9,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-216",
+        "lines": 18,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-217",
+        "lines": 10,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-218",
+        "lines": 10,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-219",
+        "lines": 5,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      },
+      {
+        "rule_id": "RULE-220",
+        "lines": 4,
+        "overridden": 0,
+        "override_rate": 0.0,
+        "status": "stable"
+      }
+    ]
+  },
+  "tie_out": {
+    "hard_gates": [
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "staging_to_lines",
+        "status": "passed",
+        "difference": 0.0
+      },
+      {
+        "kind": "diu_batch_zero_balance",
+        "status": "passed",
+        "difference": 0.0
+      }
+    ],
+    "all_passed": true
+  },
+  "sign_off": {
+    "decision_id": "DEC-091",
+    "decided_by": "Fund Manager (pilot replay)",
+    "role": "fund_manager",
+    "timestamp": "2026-09-06T10:30:55Z"
+  },
+  "export": {
+    "file": "data/processed/pilot/CLOSE-2026-03-CALDER-WEEK/validated_mapping_CLOSE-2026-03-CALDER-WEEK.csv",
+    "line_count": 100,
+    "profile": "validated_mapping_csv_v1"
+  }
+}

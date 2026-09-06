@@ -1,0 +1,29 @@
+{
+  "runs": [
+    {
+      "close_id": "CLOSE-2026-03-CALDER-WEEK",
+      "workflow": "bank_to_journal",
+      "lines": 100,
+      "cases": 90,
+      "rule_coverage": 0.1,
+      "exception_rate": 0.9,
+      "override_rate": 0.0,
+      "review_rounds_mean": 1.0,
+      "export_rows": 100,
+      "run_kind": "scripted_replay"
+    },
+    {
+      "close_id": "CLOSE-2026-Q2-KESTREL-GL-LOADER",
+      "workflow": "gl_to_loader",
+      "lines": 1204,
+      "cases": 103,
+      "rule_coverage": 0.9145,
+      "exception_rate": 0.0855,
+      "override_rate": 0.0,
+      "review_rounds_mean": 1.0,
+      "export_rows": 1204,
+      "run_kind": "scripted_replay"
+    }
+  ],
+  "generated_at": "2026-09-06T10:30:55Z"
+}

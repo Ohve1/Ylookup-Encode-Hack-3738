@@ -1,0 +1,1623 @@
+{
+  "line_count": 100,
+  "complete": 21,
+  "agrees": 12,
+  "rule_method": 10,
+  "disagreements": [
+    {
+      "line_id": "L-034",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-036",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-037",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Internal",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-040",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Internal",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "rule_mismatch"
+      ],
+      "source_flags": [
+        "position_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-048",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-049",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Internal",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-057",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-059",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact_ref",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-070",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Internal",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-091",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Vendor",
+      "filed": "Review",
+      "reasons": [
+        "review_flag",
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "review_flag",
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    }
+  ],
+  "rows": [
+    {
+      "line_id": "L-001",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Other",
+      "filed": "Other",
+      "reasons": [],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-002",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-003",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-004",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-005",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-006",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Related Party",
+      "filed": "Related Party",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-007",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Vendor",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-008",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "position_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-009",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "position_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-010",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-011",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-012",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-013",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-014",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-015",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-016",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "source_ambiguous"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "ambiguous",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-017",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-018",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Vendor",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-019",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-020",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-021",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-022",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-023",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Related Party",
+      "filed": "Related Party",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-024",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-025",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Vendor",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-026",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-027",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-028",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-029",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule",
+        "first_seen"
+      ],
+      "source_flags": [
+        "position_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-030",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-031",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-032",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-033",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-034",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-035",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-036",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-037",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Internal",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-038",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-039",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Investment",
+      "filed": "Review",
+      "reasons": [
+        "review_flag",
+        "counterparty_miss"
+      ],
+      "source_flags": [
+        "review_flag",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-040",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Internal",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "rule_mismatch"
+      ],
+      "source_flags": [
+        "position_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-041",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-042",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact_ref",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-043",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Other",
+      "filed": "Other",
+      "reasons": [],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-044",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-045",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Vendor",
+      "filed": "Vendor",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-046",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-047",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-048",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-049",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Internal",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-050",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-051",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-052",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-053",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Other",
+      "filed": "Other",
+      "reasons": [
+        "source_ambiguous"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "ambiguous",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-054",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-055",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Vendor",
+      "filed": "Vendor",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-056",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-057",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-058",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-059",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact_ref",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-060",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "source_ambiguous"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "ambiguous",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-061",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-062",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-063",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-064",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-065",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-066",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-067",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-068",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-069",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-070",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Internal",
+      "reasons": [
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-071",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-072",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-073",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-074",
+      "complete": false,
+      "agrees": true,
+      "evaluated": "Investment",
+      "filed": "Investment",
+      "reasons": [
+        "counterparty_miss"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-075",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-076",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-077",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-078",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Related Party",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-079",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-080",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-081",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-082",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Investment",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-083",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-084",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact_ref",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-085",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Other",
+      "filed": "Other",
+      "reasons": [],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-086",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-087",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-088",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-089",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Vendor",
+      "filed": "Vendor",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-090",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Related Party",
+      "filed": "Related Party",
+      "reasons": [],
+      "source_flags": [
+        "project_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-091",
+      "complete": true,
+      "agrees": false,
+      "evaluated": "Vendor",
+      "filed": "Review",
+      "reasons": [
+        "review_flag",
+        "rule_mismatch",
+        "first_seen"
+      ],
+      "source_flags": [
+        "review_flag",
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-092",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule",
+        "first_seen"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-093",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-094",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-095",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-096",
+      "complete": true,
+      "agrees": true,
+      "evaluated": "Related Party",
+      "filed": "Related Party",
+      "reasons": [],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": "rule"
+    },
+    {
+      "line_id": "L-097",
+      "complete": false,
+      "agrees": false,
+      "evaluated": "Related Party",
+      "filed": "Investment Transfer",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-098",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Review",
+      "reasons": [
+        "review_flag"
+      ],
+      "source_flags": [
+        "review_flag",
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-099",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Other",
+      "reasons": [
+        "source_ambiguous"
+      ],
+      "source_flags": [
+        "counterparty_miss"
+      ],
+      "match_method": "ambiguous",
+      "mapping_method": null
+    },
+    {
+      "line_id": "L-100",
+      "complete": false,
+      "agrees": false,
+      "evaluated": null,
+      "filed": "Internal",
+      "reasons": [
+        "no_matching_rule"
+      ],
+      "source_flags": [
+        "project_miss",
+        "counterparty_miss"
+      ],
+      "match_method": "exact",
+      "mapping_method": null
+    }
+  ]
+}

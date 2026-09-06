@@ -12,3 +12,9 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+# Dataset bodies and intermediate extraction (never commit production files)
+data/raw/
+!data/raw/README.md
+data/extracted/
+!data/extracted/.gitkeep
+*.pyc
