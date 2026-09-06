@@ -2,10 +2,22 @@
 
 **Ylookup × Encode hackathon · Product track · team 3738**
 
-The product is not a new general ledger. It is a record of the 50% that never lands in the mapping file, attached to the source it came from.
+The product converts fragmented close evidence into traceable financial Lines, applies reusable Rules, routes unresolved items into Cases, and records human decisions with source lineage and tie-out controls.
+
+It is not a new general ledger. It is a record of the 50% that never lands in the mapping file, attached to the source it came from.
 
 > "The only way for me to currently check that is manually by looking at the number, finding it in PDF, and then to verify the transform I need to understand what he was thinking."
 > — fund admin persona, live Q&A
+
+## 30 seconds for a reviewer
+
+| Question | Answer |
+|---|---|
+| Why is this better than Excel? | Excel holds the number, not the PDF string, the map version, or who changed the class. |
+| Where does automation stop? | Exact Rule hit only. No map / `Review` / a guess → Case. |
+| Why trust the number? | Every Line shows source excerpt, Rule or Decision, reason, and batch tie-out. |
+
+Full logic: [`docs/product-logic.md`](docs/product-logic.md) · dataset → object: [`docs/dataset-mapping.md`](docs/dataset-mapping.md) · why: [`docs/product-thesis.md`](docs/product-thesis.md)
 
 ## The one object
 
@@ -27,24 +39,30 @@ Then open the URL printed in the terminal (default http://127.0.0.1:8378).
 For any line you can see, without leaving the screen:
 
 1. source excerpt (statement narrative / page)
-2. whether it was produced by a **rule** (id + version) or a **decision**
+2. whether it was produced by a **Rule** (id + version) or a **Decision**
 3. if a decision: candidates, chosen treatment, who, one-paragraph reason
 4. batch **tie-out** pass/fail
 
 Accept / reject / override-with-reason. An override is stored as another decision on the line.
 
+Surface words only: **Rule / Decision / Override / Unresolved**.
+
 ## What this repo contains
 
 ```
-README.md                 ← you are here
-run.sh                    ← one command
-app/                      ← reviewer lens
-fixtures/                 ← anonymised-shape fixture (not production files)
-docs/problem-statement.md ← scored problem identification
-docs/                     ← decisions, risk register, roadmap, harness
+README.md                      ← you are here
+run.sh                         ← one command
+app/                           ← reviewer lens
+fixtures/sample-close.json     ← public stand-in (not the Discord pack)
+docs/product-logic.md          ← map + decision table
+docs/canonical-model.md        ← Line / Rule / Case / Source
+docs/roles-and-workflow.md     ← who does what
+docs/dataset-mapping.md        ← pack artifact → product object
+docs/product-thesis.md         ← why it is shaped this way
+docs/problem-statement.md      ← scored problem identification
 ```
 
-Production dataset *bodies* (PDFs, 34k-row GL) are not in this repo. Dataset contracts and unmatched counts are in `docs/data/`. Do not treat unmatched rows as bugs — they are the work.
+Production dataset *bodies* (PDFs, workbooks) are not in this repo. Keep them on the laptop. Contracts and unmatched counts: `docs/data/`.
 
 ## Three lenses, one object
 
@@ -59,8 +77,7 @@ The demo surface is the **reviewer** (admin / manager one level up). That is who
 ## Do not look for
 
 - A replacement for Investran / eFront / QuickBooks
+- Dataset PDFs or xlsx in this repository
 - Keystroke telemetry
 - Autonomous posting
 - Period-cutoff / subsequent-event controls (named in Call-1, out of this object)
-
-Full problem statement, evidence tags, and harness: [`docs/problem-statement.md`](docs/problem-statement.md).
