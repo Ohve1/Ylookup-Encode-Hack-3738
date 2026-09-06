@@ -37,10 +37,10 @@ jobs:
           pid=$!
           trap 'kill $pid 2>/dev/null || true' EXIT
           for i in 1 2 3 4 5 6 7 8 9 10; do
-            if curl -fsS http://127.0.0.1:8378/data >/tmp/close.json; then
+            if curl -fsS http://127.0.0.1:8378/api/close >/tmp/close.json; then
               break
             fi
             sleep 0.3
           done
           python3 -c "import json; d=json.load(open('/tmp/close.json')); assert d.get('lines'), d"
-          echo "OK: /data served fixture lines"
+          echo "OK: /api/close served fixture lines"
